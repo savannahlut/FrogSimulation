@@ -43,10 +43,9 @@ public class FrogSimulation{
     * Precondition: num > 0
     */
     public double runSimulations(int num){
-        if(num == 0){
-            return 0;
-        }
-        if
-        
+        /* done recursively */
+        if(num == 0) return 0;
+        if(simulate()) return (((runSimulations(num - 1) * (num-1) ) + 1 )/ num);
+        return ((runSimulations(num - 1) * (num-1) )/ num);
     }
 }
